@@ -18,7 +18,7 @@ registerPartials(__dirname + "../../resources/view/partials");
 app.use(urlencoded({ extended: false }));
 
 app.use("/static", express.static(__dirname+"/../../resources/static"))
-app.use("/static/js", express.static(__dirname+"/js"))
+app.use("/static/js", express.static(__dirname+"/react"))
 
 app.use("/", homeRouter)
 
