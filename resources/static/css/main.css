@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("/static/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+body {
+    background-image: url("/static/images/bg.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+* {
+    font-family: "Montserrat Regular", monospace;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 20px;
+}
