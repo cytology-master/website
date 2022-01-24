@@ -2,7 +2,10 @@
 <html lang="en">
     <head>
         <title>Cytology master</title>
-        <link rel="stylesheet" type="text/css" href="/static/css/main.css"
+        <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+        {{#each other_styles}}
+            <link rel="stylesheet" type="text/css" href="/static/css/{{this}}.css">
+        {{/each}}
         <meta charset="UTF-8">
     </head>
     <body>

@@ -1,0 +1,26 @@
+nav ul {
+    list-style-type: none;
+}
+nav li {
+    display: inline;
+}
+nav li::after {
+    content: " | ";
+}
+nav li:last-child::after {
+    content: none;
+}
+nav {
+    text-align: right;
+    color: white;
+    font-size: 19px;
+}
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+nav li a:hover, nav li.menu span:hover {
+    cursor: pointer;
+    text-shadow: black 0px 10px 5px;
+    color:grey;
+}
