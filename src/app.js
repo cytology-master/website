@@ -19,8 +19,6 @@ app.use(urlencoded({ extended: false }));
 
 app.use("/static", express.static(__dirname+"/../resources/static"))
 app.use("/static/js", express.static(__dirname+"/react"))
-app.use("/lib/jquery", express.static(__dirname+"/../node_modules/jquery/dist"))
-app.use("/lib/jquery/ui", express.static(__dirname+"/../node_modules/jquery-ui/ui"))
 
 app.use("/", homeRouter)
 
