@@ -5,6 +5,7 @@ import homeRouter from "./router/homeRouter.js"
 
 const app = express()
 
+// Views
 app.engine("hbs", engine({
     layoutsDir: __dirname+"/../resources/view/layouts",
     defaultLayout: "main",
@@ -15,10 +16,14 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/../resources/view")
 registerPartials(__dirname + "../resources/view/partials");
 
+// Disable extended URL
 app.use(urlencoded({ extended: false }));
 
 app.use("/static", express.static(__dirname+"/../resources/static"))
 app.use("/static/js", express.static(__dirname+"/react"))
+
+app.use("/lib/jquery", express.static(__dirname+"/../node_modules/jquery/dist"))
+app.use("/lib/jquery/ui", express.static(__dirname+"/../node_modules/jquery-ui/ui"))
 
 app.use("/", homeRouter)
 

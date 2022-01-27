@@ -6,12 +6,35 @@
         {{#each other_styles}}
             <link rel="stylesheet" type="text/css" href="/static/css/{{this}}.css">
         {{/each}}
+        {{#if use_menu}}
+            <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+        {{/if}}
         <meta charset="UTF-8">
     </head>
     <body>
-
+        {{#if use_menu}}
+            {{>menu}}
+        {{/if}}
         {{{body}}}
 
         <footer>&copy;Cytology Master - 2022. GNU GPL v.3 licence. All rights reserved</footer>
+        {{#if use_menu}}
+            <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+            <script type="text/javascript" src="/lib/jquery/ui/widgets/menu.js"></script>
+            <script type="text/javascript" src="/static/js/menu.js"></script>
+        {{else}}
+            {{#if jquery-ui}}
+                <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+                <script type="text/javascript" src="/lib/jquery/ui/menu.js"></script>
+            {{else}}
+                {{#if jquery}}
+                    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+                {{/if}}
+            {{/if}}
+        {{/if}}
+        
+        {{#each other_styles}}
+            <script type="text/javascript" src="/static/js/{{this}}.js"></script>
+        {{/each}}
     </body>
 </html>

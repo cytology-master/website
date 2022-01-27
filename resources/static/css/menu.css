@@ -24,3 +24,13 @@ nav li a:hover, nav li.menu span:hover {
     text-shadow: black 0px 10px 5px;
     color:grey;
 }
+.ui-menu {
+    width: 150px;
+    background-color: white;
+}
+.ui-menu * {
+    display: inline-block;
+    list-style-type: none;
+    background-color: inherit;
+    color: black;
+}
