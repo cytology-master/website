@@ -3,7 +3,7 @@ export const index = function (request, response) {
         "other_styles": ["index"],
         "use_menu": true,
         "jquery": true,
-        "jquery-ui": true
+        "jquery-ui": false
     })
 }
 export const about = function (request, response) {
@@ -11,6 +11,6 @@ export const about = function (request, response) {
         "other_styles": ["about"],
         "use_menu": true,
         "jquery": true,
-        "jquery-ui": true
+        "jquery-ui": false
     })
 }
