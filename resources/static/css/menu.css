@@ -1,9 +1,10 @@
 nav ul {
+    width: 150px;
     list-style-type: none;
 }
 nav {
     position: absolute;
-    right: 0px;
+    right: 15px;
     color: white;
     font-size: 19px;
 }
@@ -17,12 +18,13 @@ nav li a:hover, nav li.menu span:hover {
     color:grey;
 }
 li.menu > ul  {
+    text-align: left;
     font-size: 15px;
     font-weight: bold;
     background-color: white;
+    display: none;
 }
 li.menu > ul * {
-    display: block;
     text-align: center;
     list-style-type: none;
     background-color: inherit;
