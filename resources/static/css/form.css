@@ -1,0 +1,17 @@
+form {
+    color: white;
+    background-color: #323232;
+}
+form * {
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+form fieldset {
+    border: 5px solid #272727;
+    background-color: #202020;
+    margin: 20px;
+}
+fieldset>legend {
+    background-color: #272727;
+}
