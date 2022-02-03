@@ -21,6 +21,9 @@
         {{#if jquery-ui}}
             <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
             <script type="text/javascript" src="/lib/jquery-ui/jquery-ui.min.js"></script>
+            {{#if use_menu}}
+            	<script type="text/javascript" src="/static/js/menu.js"></script>
+            {{/if}}
         {{else}}
             {{#if use_menu}}
                 <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
@@ -31,7 +34,10 @@
                 {{/if}}
             {{/if}}
         {{/if}}
-        
+        {{#if use_react}}
+            <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+            <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        {{/if}}
         {{#each other_scripts}}
             <script type="text/javascript" src="/static/js/{{this}}.js"></script>
         {{/each}}
