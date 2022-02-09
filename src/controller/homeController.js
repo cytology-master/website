@@ -1,10 +1,10 @@
 export const index = function (request, response) { // Index page
     response.render("index.hbs", { // The sturcure of the params is
-        "other_styles": ["index"], // Styles except main we need (whithout path end extension)
-        "use_menu": true, // Will we use menu,
-        "jquery": true, // JQuery,
+        other_styles: ["index"], // Styles except main we need (whithout path end extension)
+        use_menu: true, // Will we use menu,
+        jquery: true, // JQuery,
         "jquery-ui": false, // Or JQuery UI?
-        "other_js": [] // Special JS files we need
+        other_js: [] // Special JS files we need
     })
 }
 export const about = function (request, response) {

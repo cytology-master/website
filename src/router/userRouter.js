@@ -1,10 +1,9 @@
 import { Router } from "express"; //Express router class
-import { index, about } from "../controller/homeController"; //controller
+import { singup } from "../controller/userController"; //controller
 
 const router = Router() //Initialising router
 
 //URLs
-router.get("/", index)
-router.get("/about", about)
+router.get("/singup", singup)
 
 export default router // Exporting

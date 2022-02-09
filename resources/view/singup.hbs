@@ -1,0 +1,26 @@
+<h1>Sing up</h1>
+<form action="/srv/register" method="post">
+    <fieldset>
+        <legend>Name</legend>
+        <label>Enter your name (required)</label><br>
+        <input type="text" name="name" placeholder="Your name" required><br>
+        <label>Enter your surname (required)</label><br>
+        <input type="text" name="surname" placeholder="Your surname" required><br>
+        <label>Enter your username (required)</label><br>
+        <input type="text" name="username" placeholder="Your username" required><br>
+    </fieldset>
+    <label>Enter your email (required)</label><br>
+    <input type="email" name="email" placeholder="biqcat@example.com" required><br>
+    <label>When are you were born (dd-mm-gggg)? (required)</label><br>
+    <input type="date" name="date"><br>
+    <fieldset>
+        <legend>Password</legend>
+        <label>Enter your password (required)</label><br>
+        <input type="password" name="passwd" minlength="8" required><br>
+        <label>Retype your password (required)</label><br>
+        <input type="password" name="passwd-retype" minlength="8" required><br>
+    </fieldset>
+    <label>Write some words about yourself (optional, not more than 240 words)</label><br>
+    <textarea name="bio" maxlength="240"></textarea><br>
+    <input type="submit" value="register">
+</form>

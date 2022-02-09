@@ -17,10 +17,9 @@ body {
 }
 
 footer {
-    position: absolute;
-    bottom: 10px;
     font-size: 20px;
     font-family: "Montserrat Italic", "Montserrat Regular";
+    margin: 5px;
 }
 h1 {
     text-align: center;
