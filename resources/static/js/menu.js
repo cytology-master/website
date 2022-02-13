@@ -1,5 +1,5 @@
 $(function() {
-	$("nav li.menu").click(function (event){
+	$("nav li.menu").on("click", function (event){
 		$(this).children("ul").slideToggle();
 		event.stopPropagation()
 	}

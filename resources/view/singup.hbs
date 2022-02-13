@@ -1,26 +1,46 @@
-<h1>Sing up</h1>
-<form action="/srv/register" method="post">
-    <fieldset>
-        <legend>Name</legend>
-        <label>Enter your name (required)</label><br>
-        <input type="text" name="name" placeholder="Your name" required><br>
-        <label>Enter your surname (required)</label><br>
-        <input type="text" name="surname" placeholder="Your surname" required><br>
-        <label>Enter your username (required)</label><br>
-        <input type="text" name="username" placeholder="Your username" required><br>
-    </fieldset>
-    <label>Enter your email (required)</label><br>
-    <input type="email" name="email" placeholder="biqcat@example.com" required><br>
-    <label>When are you were born (dd-mm-gggg)? (required)</label><br>
-    <input type="date" name="date"><br>
-    <fieldset>
-        <legend>Password</legend>
-        <label>Enter your password (required)</label><br>
-        <input type="password" name="passwd" minlength="8" required><br>
-        <label>Retype your password (required)</label><br>
-        <input type="password" name="passwd-retype" minlength="8" required><br>
-    </fieldset>
-    <label>Write some words about yourself (optional, not more than 240 words)</label><br>
-    <textarea name="bio" maxlength="240"></textarea><br>
-    <input type="submit" value="register">
-</form>
+<div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-google"></i></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <a href="#">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
