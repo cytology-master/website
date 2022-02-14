@@ -3,6 +3,10 @@ import { engine } from "express-handlebars" //layout for handlebars
 import { registerPartials } from "hbs" //Exactly handlebars
 // Router importing
 import homeRouter from "./router/homeRouter.js" 
+<<<<<<< HEAD
+=======
+import userRouter from "./router/userRouter.js"
+>>>>>>> andrey
 
 const app = express() //Initialising Express app
 
@@ -29,11 +33,15 @@ app.use("/lib", express.static(__dirname+"/../lib"))
 app.use("/lib/jquery", express.static(__dirname+"/../node_modules/jquery/dist"))
 
 // Routers
+<<<<<<< HEAD
+=======
+app.use("/users", userRouter)
+>>>>>>> andrey
 app.use("/", homeRouter)
 
 // 404 (Not found) page
 app.use(function (req, res, next) {
-    res.status(404).send("Not Found");
+    res.status(404).send("Not Found<br><a href=\"/\">Back to main page</a>");
 });
 
 // Starting

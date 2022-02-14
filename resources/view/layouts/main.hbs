@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Cytology master</title>
         <link rel="stylesheet" type="text/css" href="/static/css/main.css">
         {{#each other_styles}}
@@ -9,7 +10,9 @@
         {{#if use_menu}}
             <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
         {{/if}}
-        <meta charset="UTF-8">
+        {{#if use_awesome}}
+            <script src="https://kit.fontawesome.com/85099a76d6.js" crossorigin="anonymous"></script>
+        {{/if}}
     </head>
     <body>
         {{#if use_menu}}
@@ -21,6 +24,9 @@
         {{#if jquery-ui}}
             <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
             <script type="text/javascript" src="/lib/jquery-ui/jquery-ui.min.js"></script>
+            {{#if use_menu}}
+            	<script type="text/javascript" src="/static/js/menu.js"></script>
+            {{/if}}
         {{else}}
             {{#if use_menu}}
                 <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
@@ -31,7 +37,10 @@
                 {{/if}}
             {{/if}}
         {{/if}}
-        
+        {{#if use_react}}
+            <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+            <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        {{/if}}
         {{#each other_scripts}}
             <script type="text/javascript" src="/static/js/{{this}}.js"></script>
         {{/each}}
