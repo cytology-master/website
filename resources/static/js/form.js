@@ -1,9 +1,11 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+const $signUpButton = $('#signUp');
+const $signInButton = $('#signIn');
+const $container = $('#container');
 
-signUpButton.addEventListener('click', () =>
-container.classList.add('right-panel-active'));
+$signUpButton.on('click', function(){
+    $container.addClass('right-panel-active');
+});
 
-signInButton.addEventListener('click', () =>
-container.classList.remove('right-panel-active'));
+$signInButton.on('click', function() {
+    $container.removeClass('right-panel-active');
+});
