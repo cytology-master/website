@@ -27,13 +27,21 @@
             {{#if use_menu}}
             	<script type="text/javascript" src="/static/js/menu.js"></script>
             {{/if}}
+            {{#if placeholder}}
+                <script type="text/javascript" src="/lib/placeholder-js/placeholder.min.js"></script>
+            {{/if}}
         {{else}}
             {{#if use_menu}}
                 <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
             	<script type="text/javascript" src="/static/js/menu.js"></script>
             {{else}}
-                {{#if jquery}}
+                {{#if placeholder}}
                     <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+                    <script type="text/javascript" src="/lib/placeholder-js/placeholder.min.js"></script>
+                {{else}}
+                    {{#if jquery}}
+                        <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+                    {{/if}}
                 {{/if}}
             {{/if}}
         {{/if}}
