@@ -10,7 +10,6 @@ nav {
 }
 nav a {
     color: inherit;
-    text-decoration: none;
 }
 nav li a:hover, nav li.menu span:hover {
     cursor: pointer;
