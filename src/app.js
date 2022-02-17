@@ -4,7 +4,7 @@ import { registerPartials } from "hbs" //Exactly handlebars
 // Router importing
 import homeRouter from "./router/homeRouter.js" 
 import userRouter from "./router/userRouter.js"
-
+// import dump from "./router/render.js"
 const app = express() //Initialising Express app
 
 // Views
