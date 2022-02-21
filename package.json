@@ -23,10 +23,9 @@
     ]
   },
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "npm run build && node dist/app.js",
     "dev": "babel-node src/app.js",
     "commit": "git add . && git commit -am \"Commit\"",
-    "build": "babel src -d dist",
-    "postinstall": "npm run build"
+    "build": "babel src -d dist"
   }
 }
