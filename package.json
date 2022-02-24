@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Our Cytology Master website",
   "directories": {
     "lib": "lib"
   },
@@ -80,7 +80,7 @@
     "minimist": "^1.2.5",
     "mongodb": "^4.2.2",
     "mongodb-connection-string-url": "^2.4.1",
-    "mongoose": "^6.1.8",
+    "mongoose": "^6.2.3",
     "mpath": "^0.8.4",
     "mquery": "^4.0.2",
     "ms": "^2.0.0",
@@ -156,7 +156,7 @@
     "url": "git+https://github.com/cytology-master/website.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "BIQ, Inc.",
   "license": "GPL",
   "bugs": {
     "url": "https://github.com/cytology-master/website/issues"
