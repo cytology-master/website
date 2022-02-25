@@ -1,6 +1,7 @@
 import express, { urlencoded } from "express" //express
 import { engine } from "express-handlebars" //layout for handlebars
 import { registerPartials } from "hbs" //Exactly handlebars
+import session from "express-session" // Sessions
 
 // Router importing
 import homeRouter from "./router/homeRouter.js" 
@@ -10,6 +11,7 @@ import serverRouter from "./router/serverRouter.js"
 import mongoose from "mongoose"
 
 const app = express() //Initialising Express app
+
 
 // Views
 app.engine("hbs", engine({
@@ -24,6 +26,11 @@ registerPartials(__dirname + "../resources/view/partials");
 
 // Disable extended URL
 app.use(urlencoded({ extended: false }));
+
+// Sessions
+app.use(session({
+    secret: "CodingIsCytology"
+}))
 
 // Static files
 app.use("/static", express.static(__dirname+"/../resources/static"))
