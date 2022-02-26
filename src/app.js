@@ -29,7 +29,7 @@ app.use(urlencoded({ extended: false }));
 
 // Sessions
 app.use(session({
-    secret: "CodingIsCytology"
+    secret: "chafka"
 }))
 
 // Static files
