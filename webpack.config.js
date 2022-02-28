@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   entry: "./react/index.jsx",
-  mode: "development",
+  mode: "production",
   output: {
     path: path.resolve(__dirname, "react-webpack"),
     filename: "main.js"
