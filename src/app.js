@@ -40,7 +40,10 @@ app.use("/static/js", express.static(__dirname+"/react"))
 app.use("/lib", express.static(__dirname+"/../lib"))
 app.use("/lib/jquery", express.static(__dirname+"/../node_modules/jquery/dist"))
 
-// Routers
+// React
+app.use("/react", express.static(__dirname+"/../react-webpack"))
+
+// Routerss
 app.use("/lsn", lessonRouter)
 app.use("/users", userRouter)
 app.use("/srv", serverRouter)
