@@ -52,7 +52,7 @@ app.use(function (req, res, next) {
 });
 
 // Starting & connecting to MongoDB
-mongoose.connect("mongodb+srv://andev:CodingIsCool@cytologymaster.rjcpk.mongodb.net/cytology-master?retryWrites=true&w=majority",
+mongoose.connect("mongodb+srv://root:BigDipper@cytologymaster.rjcpk.mongodb.net/cytology-master?retryWrites=true&w=majority",
 { useUnifiedTopology: true }, function(err){
     if(err) return console.log(err);
     app.listen(3000, function(){
