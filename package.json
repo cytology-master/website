@@ -104,8 +104,6 @@
     "qs": "^6.9.6",
     "range-parser": "^1.2.1",
     "raw-body": "^2.4.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "regenerate": "^1.4.2",
     "regenerate-unicode-properties": "^9.0.0",
     "regenerator-runtime": "^0.13.9",
@@ -142,16 +140,15 @@
   },
   "babel": {
     "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
+      "@babel/preset-env"
     ]
   },
   "scripts": {
     "start": "node dist/app.js",
-    "dev": "webpack && babel-node src/app.js",
+    "dev": "babel-node src/app.js",
     "commit": "git add . && git commit -am \"Commit\"",
     "main-push": "git push origin main",
-    "build": "webpack && babel src -d dist",
+    "build": "babel src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npm run build"
   },
@@ -170,12 +167,6 @@
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
     "@babel/node": "^7.16.8",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.6.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.69.1",
-    "webpack-cli": "^4.9.2"
+    "@babel/preset-env": "^7.16.11"
   }
 }

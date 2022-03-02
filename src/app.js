@@ -34,14 +34,10 @@ app.use(session({
 
 // Static files
 app.use("/static", express.static(__dirname+"/../resources/static"))
-app.use("/static/js", express.static(__dirname+"/react"))
 
 // JS libs
 app.use("/lib", express.static(__dirname+"/../lib"))
 app.use("/lib/jquery", express.static(__dirname+"/../node_modules/jquery/dist"))
-
-// React
-app.use("/react", express.static(__dirname+"/../react-webpack"))
 
 // Routerss
 app.use("/lsn", lessonRouter)
