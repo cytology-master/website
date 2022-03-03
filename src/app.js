@@ -2,6 +2,7 @@ import express, { urlencoded } from "express" //express
 import { engine } from "express-handlebars" //layout for handlebars
 import { registerPartials } from "hbs" //Exactly handlebars
 import session from "express-session" // Sessions
+import params from "./params"
 
 // Router importing
 import homeRouter from "./router/homeRouter.js" 
@@ -51,10 +52,10 @@ app.use(function (req, res, next) {
 });
 
 // Starting & connecting to MongoDB
-mongoose.connect("mongodb+srv://root:BigDipper@cytologymaster.rjcpk.mongodb.net/cytology-master?retryWrites=true&w=majority",
+mongoose.connect(params.mongodb,
 { useUnifiedTopology: true }, function(err){
     if(err) return console.log(err);
-    app.listen(3000, function(){
+    app.listen(params.port, params.host, function(){
         console.log("Waiting for connection...");
     });
 });
